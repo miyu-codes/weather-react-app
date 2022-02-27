@@ -1,10 +1,12 @@
 import "./App.css";
+import Weather from "./Weather.js";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
         <h1>Weather Browser</h1>
+        <Weather />
         <footer>
           <a
             href="https://github.com/miyu-codes/weather-react-app"

@@ -1,0 +1,83 @@
+h1,
+h4 {
+  color: purple;
+  text-align: center;
+  margin: 15px;
+}
+header {
+  text-align: center;
+  font-size: 45px;
+  text-decoration: underline;
+}
+input[type="search"] {
+  text-align: center;
+  background-color: #b4a2e280;
+  border-radius: 15px;
+  border: 1px solid purple;
+  max-width: 50%;
+}
+
+input[type="submit"] {
+  color: purple;
+  border: 1px solid purple;
+  border-radius: 15px;
+  background-color: #b4a2e280;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: rgba(128, 0, 128, 0.514);
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #202299;
+  border-radius: 15px;
+}
+
+#button {
+  transition: all 200ms ease-in-out;
+}
+
+a {
+  margin-left: 10px;
+}
+
+.top {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 200px;
+}
+
+.row.center {
+  margin: auto auto 20px;
+}
+
+.temp {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: #202299;
+}
+
+.container {
+  display: block;
+  max-width: 700px;
+  font-family: "Spot Mono";
+  margin: 50px auto;
+  background-color: #b8da9480;
+  border: 0.5px solid #202299;
+  border-radius: 5px;
+}
+
+#city-name {
+  font-weight: bold;
+}
+#current-time {
+  font-size: 20px;
+}
+
+#weather-desc {
+  font-weight: bold;
+  text-decoration: underline;
+}
