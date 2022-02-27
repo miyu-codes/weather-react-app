@@ -3,20 +3,21 @@ import React, { useState } from "react";
 import "./Weather.css";
 
 export default function Weather() {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function displayTemp(response) {
     setWeatherData({
+      ready: true,
       temperature: response.data.main.temp,
       city: response.data.name,
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       icon: "http://openweathermap.org/img/wn/04d@2x.png",
+      time: "Sun 13:30",
     });
     setReady(true);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="display-weather">
         <form id="browse" className="top">
@@ -50,9 +51,13 @@ export default function Weather() {
             </h4>
           </div>
           <div className="col-6">
-            <h1 id="city-name">{weatherData.city}</h1>
-            <h4 id="current-time">Sun 13:30</h4>
-            <h4 id="weather-desc">{weatherData.description}</h4>
+            <h1 id="city-name" className="text-uppercase">
+              {weatherData.city}
+            </h1>
+            <h4 id="current-time">{weatherData.time}</h4>
+            <h4 id="weather-desc" className="text-capitalize">
+              {weatherData.description}
+            </h4>
           </div>
         </div>
       </div>
