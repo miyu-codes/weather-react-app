@@ -11,6 +11,7 @@ function App() {
           <a
             href="https://github.com/miyu-codes/weather-react-app"
             target="_blank"
+            rel="noreferrer"
           >
             Open-source code
           </a>{" "}
