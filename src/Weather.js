@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "./Weather.css";
+import DateTime from "./DateTime.js";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function displayTemp(response) {
     setWeatherData({
@@ -12,9 +13,8 @@ export default function Weather() {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       icon: "http://openweathermap.org/img/wn/04d@2x.png",
-      time: "Sun 13:30",
+      time: new Date(response.data.dt * 1000),
     });
-    setReady(true);
   }
 
   if (weatherData.ready) {
@@ -54,7 +54,10 @@ export default function Weather() {
             <h1 id="city-name" className="text-uppercase">
               {weatherData.city}
             </h1>
-            <h4 id="current-time">{weatherData.time}</h4>
+            <h4 id="current-time">
+              {" "}
+              <DateTime date={weatherData.time} />
+            </h4>
             <h4 id="weather-desc" className="text-capitalize">
               {weatherData.description}
             </h4>
@@ -64,8 +67,7 @@ export default function Weather() {
     );
   } else {
     const apiKey = "f07e9d422e3c34b4a8d4eff76c0c2e71";
-    let city = "Tokyo";
-    let apiLink = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiLink = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiLink).then(displayTemp);
 
     return "Fetching Data...";

@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <div className="container">
         <h1>Weather Browser</h1>
-        <Weather />
+        <Weather defaultCity="Tokyo" />
         <footer>
           <a
             href="https://github.com/miyu-codes/weather-react-app"
