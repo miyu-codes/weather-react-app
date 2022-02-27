@@ -5,7 +5,10 @@ function App() {
     <div className="App">
       <h1>Weather Browser</h1>
       <p>
-        <a href="shecodes.io" target="_blank">
+        <a
+          href="https://github.com/miyu-codes/weather-react-app"
+          target="_blank"
+        >
           Open-source code
         </a>{" "}
         by Miyu Hayakawa
