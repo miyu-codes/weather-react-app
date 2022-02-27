@@ -6,7 +6,7 @@ import WeatherInfo from "./WeatherInfo";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-  //let [iconLink, setIconLink] = useState("");
+
   function displayTemp(response) {
     setWeatherData({
       ready: true,
