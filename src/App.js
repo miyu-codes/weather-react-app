@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <h1>Weather Browser</h1>
       <p>
-        <a href="" target="_blank">
+        <a href="shecodes.io" target="_blank">
           Open-source code
         </a>{" "}
         by Miyu Hayakawa
