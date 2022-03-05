@@ -1,0 +1,19 @@
+.row {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ForecastIcon {
+  display: block;
+  margin: 0 auto;
+  border: 1px dotted rgba(0, 183, 255, 0.801);
+  border-radius: 15px;
+}
+
+.ForecastMax {
+  color: rgb(253, 75, 113);
+  font-weight: bold;
+}
+.ForecastMin {
+  color: rgba(255, 111, 135, 0.801);
+}

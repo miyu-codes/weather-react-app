@@ -39,7 +39,7 @@ input[type="submit"]:hover {
 img {
   display: block;
   margin: 0 auto;
-  border: 1px solid #202299;
+  border: 2px solid #202299;
   border-radius: 15px;
 }
 
@@ -90,7 +90,7 @@ a {
   font-weight: bold;
 }
 #current-time {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 #weather-desc {
