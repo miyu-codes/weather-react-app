@@ -52,9 +52,9 @@ a {
 }
 
 .top {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 30px;
-  margin-left: 200px;
+  margin-left: 105px;
 }
 
 .row.center {
@@ -84,6 +84,16 @@ a {
   background-color: #b8da9480;
   border: 0.5px solid #202299;
   border-radius: 5px;
+}
+
+.metric {
+  font-size: 25px;
+  color: #202299c2;
+  margin-left: 6px;
+}
+
+#weather-info {
+  margin-left: -25px;
 }
 
 #city-name {
