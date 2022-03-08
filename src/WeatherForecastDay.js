@@ -4,7 +4,7 @@ export default function WeatherForecastDay(props) {
   let icon = `http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`;
   function day() {
     let date = new Date(props.data.dt * 1000);
-    let day = date.getDate();
+    let day = date.getDay();
     let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
     return days[day];
