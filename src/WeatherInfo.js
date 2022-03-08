@@ -1,6 +1,5 @@
 import React from "react";
 import DateTime from "./DateTime.js";
-import WeatherTemperature from "./WeatherTemperature.js";
 
 export default function WeatherInfo(props) {
   return (
@@ -12,11 +11,12 @@ export default function WeatherInfo(props) {
           alt={props.data.description}
         ></img>
         <h4 className="temp">
-          <WeatherTemperature default={props.data.temperature} />
+          {Math.round(props.data.temperature)}
+          <span className="metric">˚C</span>
         </h4>
         <h3 className="speed">Wind: {Math.round(props.data.wind)}km/h</h3>
       </div>
-      <div className="col-6">
+      <div className="col-6" id="weather-info">
         <h1 id="city-name" className="text-uppercase">
           {props.data.city}
         </h1>
